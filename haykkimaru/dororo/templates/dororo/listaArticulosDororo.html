@@ -1,0 +1,68 @@
+{% extends 'base/base.html'%}
+
+
+
+{% block contenido %}
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.20/css/jquery.dataTables.min.css">
+  
+  <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
+
+
+<div class="grid-container">
+
+    <div class="row ">
+  
+    <div class="col-10">
+            <table class='table' id="Mytable">
+              <tr>
+                  <th class="">ID</th>
+                  <th class="">Nombre</th>
+                  <th class="">Procedencia</th>
+                  <th class="">Castigo</th>
+                  <th></th>
+                  <th class=""><a href="{% url 'dororo:printArticulos' %}" class="btn btn-primary">Imprimir</a></th>
+
+                </tr>
+                {% for item in objLSTAD %}
+                <tr>
+                  <td>{{ item.id }}</td>
+                  <td>{{ item.nombreArticulo }}</td>
+                  <td>{{ item.procedenciaArticulo }}</td>
+                  <td align="center"> {{ item.castigoDororo }} </td>
+
+                  <td> <a href="{% url 'dororo:verArticulos' item.id %}" class="btn btn-primary">Ver</a>
+                  </td>
+                  <td> <a href="{% url 'dororo:delete' item.id %}" class="btn btn-primary">Eliminar</a>
+                  </td>
+                </tr>
+
+                {% endfor %}
+             </table>
+
+             <script>
+              $(document).ready( function () {
+                $('#Mytable').DataTable(
+              {
+                responsive = true
+              }
+            
+                );
+            } );
+            </script>
+              
+            </div> 
+
+            <div clas="col-md-2">
+
+
+              <button>Prueba</button>
+              <button>Prueba</button>
+              <button>Prueba</button>
+
+            </div>
+
+          </div> 
+</div>
+
+
+{% endblock %}

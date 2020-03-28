@@ -1,0 +1,14 @@
+{% block contentino %}
+
+    <div>
+    <form method="post">
+    {% csrf_token %}
+
+    <h3>¿Deseas eliminar el articulo?</h3>
+
+    <button class="btn btn--primary" type="submit" href="{% url 'dororo:home' %}">Eliminar</button>
+    </form>
+
+    </div>
+
+{% endblock %}

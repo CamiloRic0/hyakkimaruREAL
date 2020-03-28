@@ -1,0 +1,73 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>HIAKKYMARU</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="/../../../static/assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="/../../../static/assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="landing is-preload">
+
+					<header id="header" class="alt">
+						<h1><a href="index.html">HIAKKIMARU</a></h1>
+						<nav id="nav">
+							<ul>
+								<li class="special">
+									{% block menu %}
+									<a href="#menu" class="menuToggle color"><span>Menu</span></a>
+									{% endblock menu %}
+
+									<div id="menu">
+										<ul>
+											<li><a href="{% url 'dororo:home' %}">Home</a></li>
+											<li><a href="{% url 'dororo:PartesCuerpo' %}">Formulario Partes Cuerpo</a></li>
+											<li><a href="{% url 'dororo:Ubicaciones' %}">Formulario Ubicaciones</a></li>
+											<li><a href="{% url 'dororo:Demonios' %}">Formulario Demonios</a></li>
+                                            <li><a href="{% url 'dororo:Peleas' %}">Formulario Peleas</a></li>
+											<li><a href="{% url 'dororo:Articulos' %}">Formulario Articulos Dororo</a></li>
+											<li><a href="{% url 'dororo:listarPartesCuerpo' %}">Listar Partes faltantes</a></li>
+										</ul>
+									</div>
+								</li>
+							</ul>
+						</nav>
+					</header>
+
+  {% block contenido %}Aqui va el contenido de tu pagina{% endblock contenido %}
+
+<script>
+  $(document).ready( function () {
+    $('#table').DataTable(
+  {
+    responsive = true
+  }
+
+    );
+} );
+</script>
+
+
+  <!-- Bootstrap core JavaScript
+    ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+
+
+
+
+  			<!-- Footer -->
+        <footer id="footer">
+          LA HISTORIA DE HYAKKIMARU COMIENZA EN LA ÉPOCA DE LOS SAMURAIS (PERIDO SENGOKU), SI BIEN EL NACE CON VARIAS DISCAPACIDADES DEBIDO A QUE FUE CONSUMIDO POR 12 DEMONIOS TRAS EL PACTO DE SU PADRE EL CUAL TENÍA COMO OBJETIVO GOBERNAR AQUELLA TIERRA EN LA QUE VIVÍA, TODO ESTO A COSTA DE SU HIJO RECIÉN NACIDO
+            </footer>
+        </div>
+      <!-- Scripts -->
+        <script src="/../../../static/assets/js/jquery.min.js"></script>
+        <script src="/../../../static/assets/js/jquery.scrollex.min.js"></script>
+        <script src="/../../../static/assets/js/jquery.scrolly.min.js"></script>
+        <script src="/../../../static/assets/js/browser.min.js"></script>
+        <script src="/../../../static/assets/js/breakpoints.min.js"></script>
+        <script src="/../../../static/assets/js/util.js"></script>
+        <script src="/../../../static/assets/js/main.js"></script>
+  
+    </body>
+  </html>

@@ -1,0 +1,42 @@
+		{% extends 'base/base.html'%}
+
+		{% block contenido%}
+
+				<!-- Banner -->
+					<section id="banner">
+						<div class="inner">
+							<img src="/../../../static/images/Hyakkimaru-__-Dororo-by-kuroki.svg" alt="" /><br></div><br>
+						  
+                            <h2>hiakkimaru</h2>
+
+					</section>
+					<section>
+
+						<table class='table'>
+							<tr>
+								<th class="">ID</th>
+								<th class="">Nombre</th>
+								<th class="">Procedencia</th>
+								<th class="">Castigo</th>
+								<th class=""><a href="{% url 'dororo:printArticulos' %}" class="btn btn-primary">Imprimir Todo</a></th>
+			  
+							  </tr>
+							  {% for item in objLSTAD %}
+							  <tr>
+								<td>{{ item.id }}</td>
+								<td>{{ item.nombreArticulo }}</td>
+								<td>{{ item.procedenciaArticulo }}</td>
+								<td> {{ item.castigoDororo }} </td>
+			  
+								<td> <a href="{% url 'dororo:verArticulos' item.id %}" class="btn btn-primary">Ver</a>
+								</td>
+								<td> <a href="{% url 'dororo:delete' item.id %}" class="btn btn-primary">Eliminar</a>
+								</td>
+							  </tr>
+			  
+							  {% endfor %}
+						   </table>
+					</section>
+
+					
+	{% endblock %}

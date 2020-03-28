@@ -1,0 +1,50 @@
+{% extends 'base/base.html' %}
+
+{% block contenido %}
+
+
+<body class="colorBodyPeleas">
+
+  <div class="row imagenDivPeleas">
+       
+      <div class="col-md-1">
+  
+       </div>
+  
+  
+       <div class="col-md-5 centerr">
+  
+  <form method="POST">
+  
+    <div class="">
+      {% csrf_token %}
+      {{form.as_p}}
+    </div>
+    <br>
+    <button class="btn btn-primary buttons" type="submit">Registrar</button>
+  </form>
+  
+  <div class="row">
+    <div class="col-md-3 "></div>
+    <div class="col-md-6">
+
+        
+    </div>
+    <div class="col-md-3"></div>
+
+
+</div>
+
+
+</div>
+
+<div class="col-md-6 ">
+
+</div>
+</div>
+  
+  </body>
+
+
+
+{% endblock %}

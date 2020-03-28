@@ -1,0 +1,82 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>HIAKKYMARU</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="landing is-preload">
+
+					<header id="header" class="alt">
+						<h1><a href="index.html">HIAKKIMARU</a></h1>
+						<nav id="nav">
+							<ul>
+								<li class="special">
+									<a href="#menu" class="menuToggle"><span>Menu</span></a>
+									<div id="menu">
+										<ul>
+											<li><a href="index.html">Home</a></li>
+											<li><a href="formularioPartes.html">Formulario Partes Cuerpo</a></li>
+											<li><a href="formularioUbicaciones.html">Formulario Ubicaciones</a></li>
+											<li><a href="formularioResultados.html">Formulario Resultados</a></li>
+											<li><a href="formularioDemonios.html">Formulario Demonios</a></li>
+                                            <li><a href="formularioPeleas.html">Formulario Peleas</a></li>
+                                            <li><a href="formularioArticulosDororo.html">Formulario Arituclos Dororo</a></li>
+										</ul>
+									</div>
+								</li>
+							</ul>
+						</nav>
+					</header>
+
+
+					<table class='table'>
+						<tr>
+							<th class="">ID</th>
+							<th class="">Nombre</th>
+							<th class="">Procedencia</th>
+							<th class="">Castigo</th>
+		  
+						  </tr>
+						  {% for item in objLSTAD %}
+						  <tr>
+							<td>{{ item.id }}</td>
+							<td>{{ item.nombreArticulo }}</td>
+							<td>{{ item.procedenciaArticulo }}</td>
+							<td> {{ item.castigoDororo }} </td>
+		  
+							<td> <a href="{% url 'dororo:ver' item.id %}" class="btn btn-primary">Ver</a>
+							</td>
+							<td> <a href="{% url 'dororo:delete' item.id %}" class="btn btn-primary">Eliminar</a>
+							</td>
+						  </tr>
+		  
+						  {% endfor %}
+					   </table>
+
+				<!-- Banner -->
+					<section id="banner">
+						<div class="inner">
+							<img src="images/Hyakkimaru-__-Dororo-by-kuroki.svg" alt="" /><br></div><br>
+                          
+                            <h2>hiakkimaru</h2>
+						
+					</section>
+				<!-- Footer -->
+					<footer id="footer">
+				LA HISTORIA DE HYAKKIMARU COMIENZA EN LA ÉPOCA DE LOS SAMURAIS (PERIDO SENGOKU), SI BIEN EL NACE CON VARIAS DISCAPACIDADES DEBIDO A QUE FUE CONSUMIDO POR 12 DEMONIOS TRAS EL PACTO DE SU PADRE EL CUAL TENÍA COMO OBJETIVO GOBERNAR AQUELLA TIERRA EN LA QUE VIVÍA, TODO ESTO A COSTA DE SU HIJO RECIÉN NACIDO
+					</footer>
+			</div>
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
