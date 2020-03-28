@@ -81,7 +81,7 @@ DATABASES = {
         'USER': 'admin',
         'PASSWORD': '123',
         'HOST': '127.0.0.1',
-        'PORT': '5432',
+        'PORT': '5432', #if imac == true change to 5434
     }
 }
 
