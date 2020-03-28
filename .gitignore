@@ -5,3 +5,6 @@ lib
 pyvenv.cfg
 *.svg
 *.psd
+*.jpg
+*.pdf
+*.png
